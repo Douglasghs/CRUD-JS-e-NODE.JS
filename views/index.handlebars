@@ -1,0 +1,108 @@
+<!-- BARRA DE MENU SUPERIOR -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>GERENCIADOR DE USUÁRIOS</strong></a>
+        <button type="button" class="btn btn-danger" onclick="BtnAdicionar()" id="btnAdicionarUser"><strong>Adicionar
+                Usuário</strong></button>
+        <form  class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                name="inputPesquisa" id="inputPesquisa">
+            <button class="btn btn-dark" type="button" onclick="BTNPesquisar()"><strong>Pesquisar</strong></button>
+        </form>
+    </div>
+    </div>
+</nav>
+
+
+<!-- CAMPO ESQUERDO COM OS REGISTROS DO BANCO -->
+<div id="MostrarIdsDoBD">
+    <div id="Titulo">
+        <p id="TituloIds"><strong>DTN_ID:</strong></p>
+        <p class="PontoSeparacao"><strong>|</strong></p>
+        <p id="TituloNome"><strong>DTN_DESTINATION</strong></p>
+        <p class="PontoSeparacao"><strong>|</strong></p>
+    </div>
+
+    {{#each posts}}
+
+    <input type="text" value={{DTN_ID}} id="Campo_DTNID" readonly="true" name="Campo_DTNID">
+
+    <input type="text" value={{DTN_DESTINATION}} id="Campo_DTN_DESTINATION" readonly="true">
+
+    <button type="button" class="btn btn-success" id="btnEditar" onclick="BtnEditar({{DTN_ID}})"><strong>Editar</strong></button>
+    <button type="button" class="btn btn-warning" id="btnExcluir"
+        onclick="BtnExcluir({{DTN_ID}},'{{DTN_DESTINATION}}')"><strong>Excluir</strong></button>
+    <button type="button" class="btn btn-dark" id="btnAdicionarUserNaListaCSV"
+        onclick="AdicionarUserNaListaCSV({{DTN_ID}},'{{DTN_DESTINATION}}')"><strong>Add CSV</strong></button>
+    
+
+    {{/each}}
+</div>
+
+<!-- CAMPO DIREITO COM AS TELA DE INSERIR, EDITAR E EXCLUIR -->
+<div id="CadastroEdicaoExclusao">
+
+    <!-- CAMPO DE ADICIONAR REGISTRO -->
+    <div id="ChamadaAdicionarUser">
+         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" id="label_tituloAddUser"><strong>ADICIONAR NOVO
+                    USUÁRIO</strong></label>
+            <label for="exampleInputEmail1" class="form-label" id="label_idAddUser"><strong>DTN_ID</strong></label>
+            <input type="text" class="form-control" id="inputIdsAddUser" name="dtnId" maxlength="20">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+                id="label_destinationAddUser"><strong>DTN_DESTINATION</strong></label>
+            <input type="text" class="form-control" id="inputDestinationAddUser" name="dtnNome" maxlength="10">
+        </div>
+        <button type="button" class="btn btn-danger" id="btnAddUser" onclick="AdicionarUser()"><strong>Adicionar
+                Usuário</strong></button>
+
+        <textarea name="" id="AreaResultadoAddUser" readonly="true"></textarea>
+    </div>
+
+    <!-- CAMPO DE EDITAR REGISTRO -->
+    <div id="chamadaEditarUser">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" id="label_tituloEditUser"><strong>EDITANDO
+                    USUÁRIO</strong></label>
+            <label for="exampleInputEmail1" class="form-label" id="label_idEditUser"><strong>DTN_ID</strong></label>
+            <input type="text" class="form-control" id="inputIdsEditUser" name="dtnId" readonly = "true">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+                id="label_destinationEditUser"><strong>DTN_DESTINATION</strong></label>
+            <input type="text" class="form-control" id="inputDestinationEditUser" name="dtnNome"  maxlength="10">
+        </div>
+        <button type="button" class="btn btn-success" id="btnEditUser" onclick="EditarUser()"><strong>Salvar
+                Alterações</strong></button>
+
+        <textarea name="" id="AreaResultadoEditUser" readonly="true"></textarea>
+
+    </div>
+
+    <!-- CAMPO DE EXCLUIR REGISTRO -->
+    <div id="chamadaExcluirUser">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" id="label_tituloExcluirUser"><strong>EXCLUINDO
+                    USUÁRIO</strong></label>
+            <label for="exampleInputEmail1" class="form-label" id="label_idExcluirUser"><strong>DTN_ID</strong></label>
+            <input type="text" class="form-control" id="inputIdsExcluirUser" name="dtnId" readonly = "true">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+                id="label_destinationExcluirUser"><strong>DTN_DESTINATION</strong></label>
+            <input type="text" class="form-control" id="inputDestinationExcluirUser" name="dtnNome" readonly = "true">
+        </div>
+        <button type="button" class="btn btn-warning" id="btnExcluirUser" onclick="ExcluirUser()"><strong>Confirmar
+                Exclusão</strong></button>
+
+        <textarea name="" id="AreaResultadoExcluirUser" readonly="true"></textarea>
+
+    </div>
+</div>
+
+<!-- BARRA INFERIOR DO FRONT -->
+<div id="barraInferior">
+    <button type="button" class="btn btn-warning" id="btn_ListSalvar" onclick="salvarLista()"><strong>Salvar lista</strong></button>
+</div>

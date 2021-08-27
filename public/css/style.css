@@ -1,0 +1,377 @@
+/* ---------------------------------------------------------------------------------------------------
+                                              Menu superior
+   --------------------------------------------------------------------------------------------------- 
+*/ 
+#btnAdicionarUser{
+    float: left;
+    margin-left: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+/* ---------------------------------------------------------------------------------------------------
+                                        campo onde fica os registros 
+   --------------------------------------------------------------------------------------------------- 
+*/ 
+#MostrarIdsDoBD{
+    overflow: auto;
+    float: left;
+    width: 50%;
+    height: 670px;
+    border: 1px solid darkgray;
+    background-color: rgba(0, 195, 255, 0.212);
+}
+
+#Titulo{
+    float: left;
+    width: 99.3%;
+    height: 37px;
+    margin-top: 0.3%;
+    background-color: darkgray;
+    border: 1px solid darkgray;
+}
+
+#TituloIds{
+    float: left;
+    width: 20%;
+
+    text-align: center;
+    font-size: 150%;
+}
+
+#TituloNome{
+    float: left;
+    width: 37%;
+    margin-left: 2%;
+
+    text-align: center;
+    font-size: 150%;
+}
+
+.PontoSeparacao{
+    float: left;
+    text-align: center;
+    border: 1px solid red;
+    font-size: 150%;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+}
+
+#Campo_DTNID{
+    float: left;
+    width: 20%;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
+    margin-top: 0.4%;
+    border: 1px solid black;
+
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#Campo_DTN_DESTINATION{
+    float: left;
+    width: 39%;
+    text-align: center;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
+    margin-top: 0.4%;
+    margin-left: 1%;
+    border: 1px solid black;
+
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#btnEditar{
+    float: left;
+    margin-left: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 0.4%;
+}
+
+#btnExcluir{
+    float: left;
+    margin-left: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 0.4%;
+}
+
+#btnAdicionarUserNaListaCSV{
+    float: left;
+    margin-left: 1%;
+    margin-top: 0.4%;
+    padding-left: 2.1%;
+    padding-right: 2.1%;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------
+                                campo onde fica os layouts de edição
+   --------------------------------------------------------------------------------------------------- 
+*/ 
+
+
+#CadastroEdicaoExclusao{
+    float: left;
+    width: 50%;
+    border: 1px solid yellow;
+    background-color: darkgray;
+    height: 670px;
+}
+
+#label_tituloAddUser{
+    float: left;
+    width: 90%;
+    border: 1px solid red;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 250%;
+}
+
+#label_idAddUser{
+    width: 100%;
+    text-align: center;
+    margin-top: 7%;
+
+    font-size: 140%;
+}
+
+#inputIdsAddUser{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+
+    color: red;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#label_destinationAddUser{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 4%;
+
+    font-size: 140%;
+}
+
+#inputDestinationAddUser{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+
+    color: red;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#btnAddUser{
+    float: left;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+
+#AreaResultadoAddUser{
+    float: left;
+    width: 90%;
+    height: 29%;
+    margin-left: 5%;
+    margin-top: 15%;
+    padding-bottom: 5%;
+    border-radius: 5px;
+    background-color: black;
+
+    color: white;
+}
+
+
+
+
+
+#label_tituloEditUser{
+    float: left;
+    width: 90%;
+    border: 1px solid green;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 3%;
+  
+    font-size: 250%;
+}
+
+#label_idEditUser{
+    width: 100%;
+    text-align: center;
+    margin-top: 7%;
+
+    font-size: 140%;
+}
+
+#inputIdsEditUser{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+
+    color: green;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#label_destinationEditUser{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 4%;
+
+    font-size: 140%;
+}
+
+#inputDestinationEditUser{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+
+    color: green;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#btnEditUser{
+    float: left;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+
+#AreaResultadoEditUser{
+    float: left;
+    width: 90%;
+    height: 29%;
+    margin-left: 5%;
+    margin-top: 15%;
+    padding-bottom: 5%;
+    border-radius: 5px;
+    background-color: black;
+
+    color: white;
+}
+
+
+
+
+#label_tituloExcluirUser{
+    float: left;
+    width: 90%;
+    border: 1px solid yellow;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 250%;
+}
+
+#label_idExcluirUser{
+    width: 100%;
+    text-align: center;
+    margin-top: 7%;
+
+    font-size: 140%;
+}
+
+#inputIdsExcluirUser{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+
+    color: rgb(124, 124, 1);
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#label_destinationExcluirUser{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 4%;
+
+    font-size: 140%;
+}
+
+#inputDestinationExcluirUser{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+
+    color: rgb(124, 124, 1);
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+#btnExcluirUser{
+    float: left;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+
+#AreaResultadoExcluirUser{
+    float: left;
+    width: 90%;
+    height: 29%;
+    margin-left: 5%;
+    margin-top: 15%;
+    padding-bottom: 5%;
+    border-radius: 5px;
+    background-color: black;
+
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------------------------------
+                                        barra inferior
+   --------------------------------------------------------------------------------------------------- 
+*/ 
+
+
+#barraInferior{
+    float: left;
+    width: 100%;
+    height: 70px;
+    background-color:rgb(3, 82, 230);
+}
+
+#btn_ListSalvar{
+    float: left;
+    margin-top: 1%;
+    margin-left: 15%;
+}
