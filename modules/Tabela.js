@@ -1,5 +1,5 @@
 const sequelize = require('sequelize')  // Importação da bilblioteca sequelize
-const Sequelize = new sequelize('gerenciador_de_pessoas', 'root','147258',{
+const Sequelize = new sequelize('gerenciador_de_pessoas', 'root','',{
     dialect:'mysql',
     host: "localhost",
     define: {

@@ -18,7 +18,8 @@ const mysql = require('mysql')
 const criandoBancoDeDados = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "147258",
+  password: "",
+  port: 3306
   //database: ''
 })
 
