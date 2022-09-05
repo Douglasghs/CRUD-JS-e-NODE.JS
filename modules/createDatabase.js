@@ -47,6 +47,7 @@ criandoBancoDeDados.query('CREATE DATABASE IF NOT EXISTS gerenciador_de_pessoas'
   }
 });
 
+
 function CreatTable(){
   criandoBancoDeDados.query("USE gerenciador_de_pessoas", (erro, result) =>{
     if(erro){
