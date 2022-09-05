@@ -29,7 +29,6 @@ app.use(express.static(path.join(__dirname, "/public")))
 
 
 const mysql = require('./modules/createDatabase') // Importção do arquivo de criação do banco de dados
-const Tabela = require('./modules/Tabela')  // importação do arquivo de criação da tabela do banco de dados
 const readline = require('readline')  // permite a opção de input e output no console da aplicação
 
 

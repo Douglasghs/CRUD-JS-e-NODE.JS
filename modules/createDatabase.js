@@ -19,16 +19,16 @@ const criandoBancoDeDados = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  port: 3306
-  //database: ''
-})
+  port: 3306,
+});
 
 
 criandoBancoDeDados.connect((erro) => {
   if (erro) {
-    console.log("1º-- conexão da criação do Banco de Dados = " + erro)
+    console.log("1º-- Erro na conexão com o Banco de Dados");
+    console.log(erro);
   } else {
-    console.log("1º -- conexão da criação do banco de dados feito com sucesso")
+    console.log("1º -- Conexão com banco de dados feito com sucesso");
   }
 })
 
@@ -43,9 +43,29 @@ criandoBancoDeDados.query('CREATE DATABASE IF NOT EXISTS gerenciador_de_pessoas'
     console.log(errBanco)
   } else if (resultBanco) {
     console.log(resultBanco)
+    CreatTable();
   }
-})
+});
+
+function CreatTable(){
+  criandoBancoDeDados.query("USE gerenciador_de_pessoas", (erro, result) =>{
+    if(erro){
+      console.log(erro);
+    }
+    else{
+      criandoBancoDeDados.query("CREATE TABLE if not exists tba_destinations (DTN_ID VARCHAR(20) NOT NULL PRIMARY KEY, DTN_DESTINATION VARCHAR(50))", (erro, result) =>{
+        if(erro){
+          console.log("Erro ao criar a tabela");
+          console.log(erro);
+        }
+        else{
+          console.log("Tabela criada com sucesso");
+        }
+      });
+    }
+  });
+}
 
 module.exports = {
   criandoBancoDeDados: criandoBancoDeDados
-}
+};
